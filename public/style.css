@@ -1,0 +1,246 @@
+body {
+  padding-top: 80px;
+  background-image: url(img/stolen3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #95814f;
+  font-family: "Limelight", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  height: 200px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: black;
+  font-size: 40px;
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-style: italic;
+  background-color: white;
+  margin-top: 0;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn-default {
+  color: black;
+  background-color: white;
+  padding: 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.btn-warning,
+.signUpPg a,
+.logInPg a,
+.profileBtn {
+  font-family: "Limelight", sans-serif;
+  color: turquoise;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 6px;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.form-group,
+.signUpPg,
+.logInPg {
+  color: white;
+  display: inline-block;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.signUpPg a,
+.logInPg a,
+.form-group input,
+.messageInput {
+  background-color: white;
+  padding: 6px;
+  border: 3px solid black;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.signUpPg a:hover,
+.btn-warning:hover,
+.logInPg a:hover,
+.profileBtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.well,
+.addMessage {
+  color: white;
+  background-color: black;
+  width: fit-content;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+h3 {
+  color: #446a4d;
+}
+
+.fa-user-tie,
+h4 {
+  color: black;
+}
+
+.addMessage {
+  margin-bottom: 5px;
+}
+
+ul {
+  color: black;
+  list-style: none;
+}
+
+.message {
+  padding: 5px;
+  background-color: rgb(252, 216, 13);
+  padding: 8px;
+  width: fit-content;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.news,
+.gallery, .home {
+  font-family: "Limelight", sans-serif;
+  color: #446a4d;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 6px;
+  border: 3px solid black;
+  border-radius: 6px;
+}
+
+.news:hover,
+.gallery:hover, .home:hover {
+  color: white;
+  background-color: #a81036;
+}
+
+.fa-up-long,
+.fa-down-long {
+  cursor: pointer;
+}
+
+.addtlPgs {
+  display: flex;
+  gap: 10px;
+}
+
+/* GALLERY CSS */
+.logInPg2 a {
+  font-family: "Limelight", sans-serif;
+  color: turquoise;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 6px;
+  border: 3px solid white;
+  border-radius: 6px;
+  background-color: black;
+  padding: 6px;
+  border: 3px solid black;
+  border-radius: 4px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.logInPg2 {
+  color: black;
+  display: inline-block;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.logInPg2 a:hover {
+  background-color: white;
+  color: rgb(187, 160, 3);
+}
+
+.topImgs p {
+  background-color: #eb9675;
+  color: black;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.topImgs {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.topImgs img {
+  display: block;
+  width: 100%;
+}
+
+#title{
+  color:white;
+  background-color: #15431f;
+}
+
+
+/* NEWS PAGE CSS */
+
+.newsPg, .newsPg a, .fa-youtube, #link{
+color:white;
+}
+
+.newsPg a, #link{
+    text-decoration: none;
+}
+
+.newsPg a:hover, #link:hover{
+  background-color:#a81036;
+  padding: 6px;
+  border-radius: 8px;
+}
+
+.story{
+  color:white;
+}
+
+.histore {  
+  height: 100vh;           /* full viewport height */
+}
+.histoire img {
+  height: auto;
+  max-width: 100%; /* responsive */
+  margin-top: 10px;
+}
+
+#title2{
+  color:white;
+  background-color: gray;
+  padding: 6px;
+  font-size: 25px;
+display:flex;
+justify-content: center;
+}
+
+.news-title{
+  color:rgb(236, 226, 27);
+  font-size: 20px;
+}

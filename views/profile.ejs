@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Limelight&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/66a5eab7b2.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/img/thief1.svg">
+    <link rel="stylesheet" href="style.css">
+<style>
+  body{
+  background-image: url(img/dark-thief1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+</style>
+
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1> ✨ Trending ✨ </h1>
+        <!-- <i class="fa-solid fa-dumbbell"></i> -->
+        <a href="/logout" class="btn-default btn-sm">Logout</a>
+    </div>
+
+    
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+        <h3><i class="fa-solid fa-user-tie"></i> Local</h3>
+            <div class="well">
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <!-- <a href="/unlink/local" class="btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn-default">Connect Local</a>
+                <% } %> -->
+
+            </div>
+            
+        </div>
+        <div class="col-sm-6">
+          <h3><i class="fa-solid fa-message"></i> Messages</h3>
+          <ul class="messages">
+          <% for(let i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <span><%= messages[i].name %></span>
+              <span><%= messages[i].msg %></span>
+              <span><%= messages[i].thumbUp %></span>
+              <span><i class="fa fa-up-long" aria-hidden="true"></i></span>
+              <span><i class="fa fa-down-long" aria-hidden="true"></i></span>
+              <!-- <span><i class="fa fa-trash" aria-hidden="true"></i></span> -->
+            </li>
+          <% } %>
+          </ul>
+
+          <h2 class="addMessage">Add a message</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+            <input type="text" value="<%= user.local.email %>" name="name" class="messageInput">
+            <input type="text" placeholder="add message" name="msg" class="messageInput">
+            <button type="submit" class="profileBtn">Submit</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<div class="addtlPgs">
+<form action="/gallery" method="GET">
+  <button type="submit" class="gallery">Gallery</button>
+</form>
+
+<form action="/news" method="GET">
+  <button type="submit" class="news">Recent News</button>
+</form>
+
+<form action="/" method="GET">
+  <button type="submit" class="home">Home</button>
+</form>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
