@@ -197,10 +197,25 @@ ul {
 }
 
 #title{
-  color:white;
   background-color: #15431f;
 }
 
+#title a{
+  color: white;
+  text-decoration: none;
+}
+
+#title a:hover{
+    color:#a81036;
+}
+
+#title:hover{
+  background-color: rgb(231, 192, 255);
+}
+
+.newsPg{
+  margin-left: 5px;
+}
 
 /* NEWS PAGE CSS */
 
