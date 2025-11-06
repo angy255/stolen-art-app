@@ -26,10 +26,22 @@ module.exports = function(app, passport, db) {
         res.redirect('/');
     });
 
-// message board routes ===============================================================
+// journal entry routes ===============================================================
 
     app.post('/messages', (req, res) => {
-      db.collection('messages').save({name: req.body.name, msg: req.body.msg, thumbUp: 0, thumbDown:0}, (err, result) => {
+      const date = new Date();
+      const formattedDate = `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
+      
+      db.collection('messages').save({
+        name: req.body.name, 
+        museum: req.body.museum,
+        artPiece: req.body.artPiece,
+        imageUrl: req.body.imageUrl,
+        notes: req.body.notes,
+        date: formattedDate,
+        thumbUp: 0, 
+        thumbDown: 0
+      }, (err, result) => {
         if (err) return console.log(err)
         console.log('saved to database')
         res.redirect('/profile')
@@ -38,28 +50,21 @@ module.exports = function(app, passport, db) {
 
     app.put('/messages', (req, res) => {
       db.collection('messages')
-      .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
+      .findOneAndUpdate({
+        name: req.body.name, 
+        museum: req.body.museum,
+        artPiece: req.body.artPiece,
+        imageUrl: req.body.imageUrl
+      }, {
         $set: {
-          thumbUp:req.body.thumbUp + 1
+          museum: req.body.museum,
+          artPiece: req.body.artPiece,
+          imageUrl: req.body.imageUrl,
+          notes: req.body.notes
         }
       }, {
         sort: {_id: -1},
-        upsert: true
-      }, (err, result) => {
-        if (err) return res.send(err)
-        res.send(result)
-      })
-    })
-
-    app.put('/messagesDown', (req, res) => {
-      db.collection('messages')
-      .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
-        $set: {
-          thumbUp:req.body.thumbUp - 1
-        }
-      }, {
-        sort: {_id: -1},
-        upsert: true
+        upsert: false
       }, (err, result) => {
         if (err) return res.send(err)
         res.send(result)
@@ -67,7 +72,11 @@ module.exports = function(app, passport, db) {
     })
 
     app.delete('/messages', (req, res) => {
-      db.collection('messages').findOneAndDelete({name: req.body.name, msg: req.body.msg}, (err, result) => {
+      db.collection('messages').findOneAndDelete({
+        name: req.body.name, 
+        museum: req.body.museum,
+        artPiece: req.body.artPiece
+      }, (err, result) => {
         if (err) return res.send(500, err)
         res.send('Message deleted!')
       })

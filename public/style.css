@@ -13,7 +13,6 @@ img {
   height: 200px;
 }
 
-
 h1 {
   color: white;
   text-align: center;
@@ -47,7 +46,8 @@ h3 {
 .logInPg a,
 .profileBtn {
   font-family: "Limelight", sans-serif;
-  color: turquoise;
+  background-color: rgb(0, 151, 226);
+  color: white;
   font-size: 28px;
   cursor: pointer;
   padding: 6px;
@@ -65,8 +65,8 @@ h3 {
   font-size: 25px;
 }
 
-.signUpPg a,
-.logInPg a,
+/* .signUpPg a,
+.logInPg a, */
 .form-group input,
 .messageInput {
   background-color: white;
@@ -74,6 +74,14 @@ h3 {
   border: 3px solid black;
   border-radius: 4px;
   margin-bottom: 20px;
+  font-size: 20px;
+  font-family: "Limelight", sans-serif;
+  border-radius: 6px;
+}
+
+.signUpPg a,
+.logInPg a{
+  text-decoration: none;
   font-size: 20px;
 }
 
@@ -89,7 +97,7 @@ h3 {
 .addMessage {
   color: white;
   background-color: black;
-  width: fit-content;
+  /* width: fit-content; */
   padding: 8px;
   border-radius: 8px;
 }
@@ -122,7 +130,8 @@ ul {
 }
 
 .news,
-.gallery, .home {
+.gallery,
+.home {
   font-family: "Limelight", sans-serif;
   color: #446a4d;
   font-size: 20px;
@@ -134,7 +143,8 @@ ul {
 }
 
 .news:hover,
-.gallery:hover, .home:hover {
+.gallery:hover,
+.home:hover {
   color: white;
   background-color: #a81036;
 }
@@ -149,19 +159,23 @@ ul {
   gap: 10px;
 }
 
+.messages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
 /* GALLERY CSS */
 .logInPg2 a {
   font-family: "Limelight", sans-serif;
-  color: turquoise;
-  font-size: 28px;
+  color: white;
   cursor: pointer;
   padding: 6px;
-  border: 3px solid white;
+  border: 3px solid rgb(0, 151, 226);
+  background-color: rgb(0, 151, 226);
   border-radius: 6px;
-  background-color: black;
-  padding: 6px;
-  border: 3px solid black;
-  border-radius: 4px;
   font-size: 20px;
   text-decoration: none;
 }
@@ -174,8 +188,9 @@ ul {
 }
 
 .logInPg2 a:hover {
-  background-color: white;
-  color: rgb(187, 160, 3);
+  background-color: rgb(187, 160, 3);
+  color: white;
+  border-color: rgb(187, 160, 3);
 }
 
 .topImgs p {
@@ -195,68 +210,85 @@ ul {
 .topImgs img {
   display: block;
   width: 100%;
+  border-radius: 8px;
+
 }
 
-#title{
+#title {
   background-color: #15431f;
 }
 
-#title a{
+#title a {
   color: white;
   text-decoration: none;
 }
 
-#title a:hover{
-    color:#a81036;
+#title a:hover {
+  color: #a81036;
 }
 
-#title:hover{
+#title:hover {
   background-color: rgb(231, 192, 255);
 }
 
-.newsPg{
+.newsPg {
   margin-left: 5px;
 }
 
 /* NEWS PAGE CSS */
 
-.newsPg, .newsPg a, .fa-youtube, #link{
-color:white;
+.newsPg,
+.newsPg a,
+.fa-youtube,
+#link {
+  color: white;
 }
 
-.newsPg a, #link{
-    text-decoration: none;
+.newsPg a,
+#link {
+  text-decoration: none;
 }
 
-.newsPg a:hover, #link:hover{
-  background-color:#a81036;
+.newsPg a:hover,
+#link:hover {
+  background-color: #a81036;
   padding: 6px;
   border-radius: 8px;
 }
 
-.story{
-  color:white;
+.story {
+  color: white;
 }
 
-.histore {  
-  height: 100vh;           /* full viewport height */
+.histore {
+  height: 100vh; /* full viewport height */
 }
 .histoire img {
   height: auto;
   max-width: 100%; /* responsive */
   margin-top: 10px;
+  border-radius: 8px;
 }
 
-#title2{
-  color:white;
+#title2 {
+  color: white;
   background-color: gray;
   padding: 6px;
   font-size: 25px;
-display:flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  text-align: center;
+  border-radius: 8px;
+  margin:0 auto;
+  margin-top: 10px;
 }
 
-.news-title{
-  color:rgb(236, 226, 27);
+.news-title {
+  background-color: rgb(187, 160, 3);
   font-size: 20px;
+  color: white;
+  border-radius: 8px;
+  padding: 6px;
+  width: fit-content;
 }
