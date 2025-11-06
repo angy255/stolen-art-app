@@ -47,7 +47,7 @@ Track your favorite art pieces, document museum visits, and dive deep into the s
 ## 📸 Screenshot
 
 <p align="center">
-  
+  <img width="1691" height="809" alt="art-heist-app" src="https://github.com/user-attachments/assets/ee432b59-469d-4593-8740-250681c7e98f" />
 </p>
 
 ---
@@ -66,5 +66,5 @@ Track your favorite art pieces, document museum visits, and dive deep into the s
 ## 🎨 Credits
 - Fonts from Google Fonts
 - Icons from Font Awesome
-- Art Heist Information — Various historical sources and museums
-- Inspiration — The fascinating world of art crime and cultural heritage protection
+- Heists information — various historical sources and museums
+- Inspiration — the fascinating world of art crime and cultural heritage protection
