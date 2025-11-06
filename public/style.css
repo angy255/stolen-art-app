@@ -3,7 +3,7 @@ body {
   background-image: url(img/stolen3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #95814f;
+  background-color: black;
   font-family: "Limelight", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -12,6 +12,7 @@ body {
 img {
   height: 200px;
 }
+
 
 h1 {
   color: white;
